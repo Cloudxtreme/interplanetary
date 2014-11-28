@@ -9,12 +9,7 @@ import (
 	errors "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/util/debugerror"
 	ma "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-multiaddr"
 	ma_net "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-multiaddr-net"
-	mh "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-multihash"
 )
-
-type Key interface {
-	String() string
-}
 
 type Client interface {
 	Add(io.Reader) (Key, error)
@@ -75,21 +70,4 @@ func (c *client) Add(r io.Reader) (Key, error) {
 
 func (c *client) Cat(k Key) (io.Reader, error) {
 	return nil, errors.New("TODO cat")
-}
-
-// mhKey is a key backed by a Multihash
-type mhKey struct {
-	mh mh.Multihash
-}
-
-func parseKey(maybe string) (Key, error) {
-	h, err := mh.FromB58String(maybe)
-	if err != nil {
-		return nil, err
-	}
-	return &mhKey{mh: h}, nil
-}
-
-func (k *mhKey) String() string {
-	return k.mh.B58String()
 }
