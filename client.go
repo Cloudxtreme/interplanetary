@@ -1,6 +1,7 @@
 package interplanetary
 
 import (
+	"bytes"
 	"io"
 	"net/http"
 
@@ -72,7 +73,21 @@ func (c *client) Add(r io.Reader) (Key, error) {
 }
 
 func (c *client) Cat(k Key) (io.Reader, error) {
-	return nil, errors.New("TODO cat")
+	// FIXME workaround for panic in http.Send
+	f := &cmds.SliceFile{"TODO",
+		[]cmds.File{
+			&cmds.ReaderFile{Filename: "TODO", Reader: bytes.NewReader([]byte(""))},
+		},
+	}
+	req, err := cmds.NewRequest([]string{"cat"}, nil, []string{k.String()}, f, core_cmds.CatCmd, nil)
+	if err != nil {
+		return nil, err
+	}
+	res, err := c.httpClient.Send(req)
+	if err != nil {
+		return nil, err
+	}
+	return res.Reader()
 }
 
 func (c *client) Open(filename string) (http.File, error) {

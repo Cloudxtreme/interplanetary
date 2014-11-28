@@ -62,7 +62,7 @@ Use 'ipfs <command> --help' to learn more about each command.
 var CommandsDaemonCmd = CommandsCmd(Root)
 
 var rootSubcommands = map[string]*cmds.Command{
-	"cat":       catCmd,
+	"cat":       CatCmd,
 	"ls":        lsCmd,
 	"commands":  CommandsDaemonCmd,
 	"name":      nameCmd,

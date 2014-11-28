@@ -16,7 +16,9 @@ const (
 )
 
 func main() {
-	fmt.Println(transfer())
+	if err := transfer(); err != nil {
+		fmt.Println(err)
+	}
 }
 
 func transfer() error {
@@ -28,7 +30,6 @@ func transfer() error {
 	if err != nil {
 		return err
 	}
-
 	data, err := ioutil.ReadFile("main.go")
 	if err != nil {
 		return err
