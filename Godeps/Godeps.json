@@ -1,0 +1,228 @@
+{
+	"ImportPath": "github.com/maybebtc/interplanetary",
+	"GoVersion": "go1.3.3",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "bazil.org/fuse",
+			"Rev": "a04507d54fc3610d38ee951402d8c4acab56c7b1"
+		},
+		{
+			"ImportPath": "bitbucket.org/kardianos/osext",
+			"Comment": "null-15",
+			"Rev": "44140c5fc69ecf1102c5ef451d73cd98ef59b178"
+		},
+		{
+			"ImportPath": "code.google.com/p/go-uuid/uuid",
+			"Comment": "null-12",
+			"Rev": "7dda39b2e7d5e265014674c5af696ba4186679e9"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.crypto/blowfish",
+			"Comment": "null-219",
+			"Rev": "00a7d3b31bbab5795b4a51933c04fc2768242970"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.crypto/sha3",
+			"Comment": "null-219",
+			"Rev": "00a7d3b31bbab5795b4a51933c04fc2768242970"
+		},
+		{
+			"ImportPath": "code.google.com/p/go.net/context",
+			"Comment": "null-144",
+			"Rev": "ad01a6fcc8a19d3a4478c836895ffe883bd2ceab"
+		},
+		{
+			"ImportPath": "code.google.com/p/gogoprotobuf/proto",
+			"Rev": "6c980277330804e94257ac7ef70a3adbe1641059"
+		},
+		{
+			"ImportPath": "code.google.com/p/goprotobuf/proto",
+			"Comment": "go.r60-152",
+			"Rev": "36be16571e14f67e114bb0af619e5de2c1591679"
+		},
+		{
+			"ImportPath": "code.google.com/p/snappy-go/snappy",
+			"Comment": "null-15",
+			"Rev": "12e4b4183793ac4b061921e7980845e750679fd0"
+		},
+		{
+			"ImportPath": "github.com/bren2010/proquint",
+			"Rev": "5958552242606512f714d2e93513b380f43f9991"
+		},
+		{
+			"ImportPath": "github.com/coreos/go-semver/semver",
+			"Rev": "6fe83ccda8fb9b7549c9ab4ba47f47858bc950aa"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/stack",
+			"Rev": "4da6d991fc3c389efa512151354d643eb5fae4e2"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/stackerr",
+			"Rev": "060fbf9364c89acd41bf710e9e92915a90e7a5b5"
+		},
+		{
+			"ImportPath": "github.com/h2so5/utp",
+			"Rev": "654d875bb65e96729678180215cf080fe2810371"
+		},
+		{
+			"ImportPath": "github.com/inconshreveable/go-update",
+			"Rev": "221d034a558b4c21b0624b2a450c076913854a57"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-base58",
+			"Rev": "568a28d73fd97651d3442392036a658b6976eed5"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-datastore",
+			"Rev": "b31aad9b9b22e46d99a270ed5aebb259fab64dcc"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/blocks",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/blockservice",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/blockstore",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/commands",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/config",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/core",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/crypto",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/diagnostics",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/exchange",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/fuse/ipns",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/fuse/mount",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/fuse/readonly",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/importer",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/merkledag",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/namesys",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/net",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/path",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/peer",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/pin",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/routing",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/unixfs",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/updates",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-ipfs/util",
+			"Rev": "51e2fcd39eea385c77d78858d135b282c4c69f4a"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-is-domain",
+			"Rev": "93b717f2ae17838a265e30277275ee99ee7198d6"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-logging",
+			"Rev": "74bec4b83f6d45d1402c1e9d94c0c29e39f6e0ea"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-msgio",
+			"Rev": "ab0e7a0e111d7c7d814ad238bcbf3934efb76ac3"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-multiaddr",
+			"Comment": "0.1.2-30-g99cf3ed",
+			"Rev": "99cf3edc711751cf7b43505fac0e3913f6b9a75c"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-multiaddr-net",
+			"Rev": "b6265d8119558acf3912db44abb34d97c30c3220"
+		},
+		{
+			"ImportPath": "github.com/jbenet/go-multihash",
+			"Comment": "0.1.0-5-g1976046",
+			"Rev": "1976046c2b0db0b668791b3e541d76a38b7c1af7"
+		},
+		{
+			"ImportPath": "github.com/kr/binarydist",
+			"Rev": "9955b0ab8708602d411341e55fffd7e0700f86bd"
+		},
+		{
+			"ImportPath": "github.com/maybebtc/logrus",
+			"Comment": "v0.6.0-5-gf92b795",
+			"Rev": "f92b7950b372b1db80bd3527e4d40e42555fe6c2"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/go-homedir",
+			"Rev": "7d2d8c8a4e078ce3c58736ab521a40b37a504c52"
+		},
+		{
+			"ImportPath": "github.com/syndtr/goleveldb/leveldb",
+			"Rev": "99056d50e56252fbe0021d5c893defca5a76baf8"
+		},
+		{
+			"ImportPath": "github.com/tuxychandru/pubsub",
+			"Rev": "02de8aa2db3d570c5ab1be5ba67b456fd0fb7c4e"
+		},
+		{
+			"ImportPath": "gopkg.in/natefinch/lumberjack.v2",
+			"Comment": "v1.0-12-gd28785c",
+			"Rev": "d28785c2f27cd682d872df46ccd8232843629f54"
+		}
+	]
+}
