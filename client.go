@@ -2,6 +2,7 @@ package interplanetary
 
 import (
 	"io"
+	"net/http"
 
 	cmds "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/commands"
 	cmds_http "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/commands/http"
@@ -14,6 +15,8 @@ import (
 type Client interface {
 	Add(io.Reader) (Key, error)
 	Cat(Key) (io.Reader, error)
+
+	http.FileSystem
 }
 
 type client struct {
@@ -70,4 +73,8 @@ func (c *client) Add(r io.Reader) (Key, error) {
 
 func (c *client) Cat(k Key) (io.Reader, error) {
 	return nil, errors.New("TODO cat")
+}
+
+func (c *client) Open(filename string) (http.File, error) {
+	return nil, errors.New("TODO")
 }
