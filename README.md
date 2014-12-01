@@ -1,5 +1,4 @@
 # interplanetary
-================
 
 Package `interplanetary` provides IPFS bindings for Go.
 
