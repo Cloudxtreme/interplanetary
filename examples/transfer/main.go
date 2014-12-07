@@ -10,9 +10,7 @@ import (
 
 const (
 	daemonHostAddr1 = "/ip4/127.0.0.1/tcp/5001"
-	// daemonHostAddr1 = "/ip4/104.236.179.241/tcp/5001"
 	daemonHostAddr2 = "/ip4/127.0.0.1/tcp/5001"
-	// daemonHostAddr2 = "/ip4/104.236.179.241/tcp/49267"
 )
 
 func main() {
