@@ -4,7 +4,6 @@ import (
 	"reflect"
 
 	"github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/util"
-	"github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/util/debugerror"
 )
 
 // Types of Command options
@@ -142,15 +141,15 @@ func (ov OptionValue) Float() (value float64, found bool, err error) {
 	return val, ov.found, err
 }
 
-func (ov OptionValue) String() (string, bool, error) {
+func (ov OptionValue) String() (value string, found bool, err error) {
 	if !ov.found {
 		return "", false, nil
 	}
 	val, ok := ov.value.(string)
 	if !ok {
-		return "", false, debugerror.New("cast")
+		err = util.ErrCast()
 	}
-	return val, ov.found, nil
+	return val, ov.found, err
 }
 
 // Flag names

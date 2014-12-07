@@ -3,8 +3,10 @@ package core
 import (
 	ds "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-datastore"
 	syncds "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-datastore/sync"
-	bs "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/blockservice"
+	"github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/blocks/blockstore"
+	blockservice "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/blockservice"
 	ci "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/crypto"
+	"github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/exchange/offline"
 	mdag "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/merkledag"
 	nsys "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/namesys"
 	path "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/path"
@@ -43,9 +45,8 @@ func NewMockNode() (*IpfsNode, error) {
 	nd.Routing = dht
 
 	// Bitswap
-	//??
-
-	bserv, err := bs.NewBlockService(nd.Datastore, nil)
+	bstore := blockstore.NewBlockstore(nd.Datastore)
+	bserv, err := blockservice.New(bstore, offline.Exchange(bstore))
 	if err != nil {
 		return nil, err
 	}

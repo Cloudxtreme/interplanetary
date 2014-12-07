@@ -1,6 +1,8 @@
 package strategy
 
 import (
+	"time"
+
 	bsmsg "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/exchange/bitswap/message"
 	peer "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/peer"
 	u "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-ipfs/util"
@@ -29,4 +31,8 @@ type Strategy interface {
 	NumBytesSentTo(peer.Peer) uint64
 
 	NumBytesReceivedFrom(peer.Peer) uint64
+
+	// Values determining bitswap behavioural patterns
+	GetBatchSize() int
+	GetRebroadcastDelay() time.Duration
 }

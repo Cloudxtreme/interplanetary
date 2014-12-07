@@ -3,7 +3,7 @@ package lru
 import (
 	"errors"
 
-	lru "github.com/hashicorp/golang-lru"
+	lru "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/hashicorp/golang-lru"
 	ds "github.com/maybebtc/interplanetary/Godeps/_workspace/src/github.com/jbenet/go-datastore"
 )
 

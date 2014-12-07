@@ -1,0 +1,17 @@
+{
+	"ImportPath": "github.com/h2so5/utp",
+	"GoVersion": "go1.3.3",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/davecheney/profile",
+			"Rev": "c29d1a1565bca9fbeed5eed0e5d52ba78469a16b"
+		},
+		{
+			"ImportPath": "github.com/dustin/go-humanize",
+			"Rev": "b198514c204f20799b91c93b6ffd8b26be04c2c9"
+		}
+	]
+}

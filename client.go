@@ -17,6 +17,8 @@ type Client interface {
 	Add(io.Reader) (Key, error)
 	Cat(Key) (io.Reader, error)
 
+	SwarmConnect(string) error
+
 	http.FileSystem
 }
 
@@ -90,6 +92,27 @@ func (c *client) Cat(k Key) (io.Reader, error) {
 	return res.Reader()
 }
 
+// addr := "/ip4/192.168.1.227/tcp/4001/QmYzAjMtCNKyBJ6SdsGm2xfo9G46XWeZEL2QoXjs2Z1cAV"
+func (c *client) SwarmConnect(maddr string) error {
+	req, err := cmds.NewRequest([]string{"swarm", "connect"}, nil, []string{maddr}, nil, core_cmds.SwarmCmd, nil)
+	if err != nil {
+		return err
+	}
+	if _, err := c.httpClient.Send(req); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (c *client) Open(filename string) (http.File, error) {
 	return nil, errors.New("TODO")
+}
+
+type PeerAddress interface {
+	Addr() ma.Multiaddr
+	ID() PeerID
+}
+
+type PeerID interface {
+	Equal(PeerID) bool
 }

@@ -273,15 +273,7 @@ func NewRequest(path []string, opts optMap, args []string, file File, cmd *Comma
 		optDefs = make(map[string]Option)
 	}
 
-	req := &request{
-		path:       path,
-		options:    opts,
-		arguments:  args,
-		files:      file,
-		cmd:        cmd,
-		ctx:        Context{},
-		optionDefs: optDefs,
-	}
+	req := &request{path, opts, args, file, cmd, Context{}, optDefs}
 	err := req.ConvertOptions()
 	if err != nil {
 		return nil, err
