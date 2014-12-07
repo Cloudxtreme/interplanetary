@@ -33,7 +33,6 @@ func NewClient(addr string) (Client, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	_, host, err := ma_net.DialArgs(maddr)
 	if err != nil {
 		return nil, err
