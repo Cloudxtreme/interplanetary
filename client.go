@@ -14,6 +14,7 @@ import (
 )
 
 type Client interface {
+ 	// Add adds the file given by Reader. Returns a Key.
 	Add(io.Reader) (Key, error)
 	Cat(Key) (io.Reader, error)
 
