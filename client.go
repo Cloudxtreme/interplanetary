@@ -27,7 +27,7 @@ type client struct {
 }
 
 func NewClient(addr string) (Client, error) {
-	// TODO test returns nil if addr is not a multiaddr
+	// TODO test returns nil if addr is not a multiaddr.
 	// TODO allow to connect with either multiaddr or other through configuration option
 	maddr, err := ma.NewMultiaddr(addr)
 	if err != nil {
